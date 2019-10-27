@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>Got to Go!</title>
+        <!--their code-->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!--google icon-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        
+        <!-- import the webpage's stylesheet -->
+        <link rel="stylesheet" href="style.css">
+    
+        
+        <!--search bar-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        
+        <!--michelle javascript file-->
+        <script src="javascript.js"></script>
+    </head>
+
+
+
+
+
+    <body>
+        <!--main div-->
+        <div>
+        
+            <!--table with logo, filter, search-->
+            <div class="top_web">
+                <table>
+                    <tr>
+                    <!--title-->
+                        <td>
+                            <div>
+                                <h1 id="title">Got To Go!</h1>
+                            </div>
+                        </td>
+                        
+                        <!--Seach bar-->
+                        <td>
+                            <form action="">
+                                <input type="search">
+                                <i class="fa fa-search"></i>
+                            </form>
+                        </td>
+                        
+                        <!--gps icon-->
+                        <td>
+                            <i class="material-icons" style="font-size: 30px; color: white;">near_me</i>
+                        </td>
+                        
+                        <!--filter-->
+                        <td>
+                            <div class="dropdown" style="float:right;">
+                                <button class="dropbtn">
+                                    <i class="material-icons" style="color:black;">view_headline</i>
+                                </button>
+                                <div class="dropdown-content">
+                                    <a href="#">What you are looking for:</a>
+                                    <ul>
+                                        <li><input type="checkbox" />Apple </li>
+                                        <li><input type="checkbox" />Bathroom</li>
+                                        <li><input type="checkbox" />Water fountain </li>     
+                                    </ul>
+                                    <a href="#">Distance</a>
+                                    <a href="#">Somthing</a>
+                                </div>
+                            </div>
+                        </td>
+                        
+                    </tr>
+                </table>
+            </div>
+        
+            <!--image slide show-->
+            <div id="cf">
+                <img class="bottom" src="https://i.imgur.com/PbJYNH3.png" width="400" height="300"/>
+                <img class="top" src="https://i.imgur.com/yNruA03.png" width="400" height="300"/>
+            </div>
+                             
+        </div>
+        
+        <!--Map-->
+        <div id="map"></div>
+        <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcggtxMfl244TjAb8oBbJn7H_a9GvHmxg&callback=initMap">
+        </script>
+    
+    </body>
+</html>
