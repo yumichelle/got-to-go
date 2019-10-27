@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+   <head>
+   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+   <link rel="stylesheet" type="text/css" href="styleSlider.css">
+   <!--google icon-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+                <script src="Mich.js"></script>
+
+        <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            
+       <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+     <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            
+    <link rel="stylesheet" type="text/css" href="Searchbar.css">
+        <link rel="stylesheet" type="text/css" href="styleSlider.css" >      <!--michelle javascript file-->
+        <link href="http://cdn-na.infragistics.com/igniteui/2019.1/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet" />
+    <link href="http://cdn-na.infragistics.com/igniteui/2019.1/latest/css/structure/infragistics.css" rel="stylesheet" />
+
+    <script src="http://ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.8.3.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+
+    <!-- Ignite UI Required Combined JavaScript Files -->
+    <script src="http://cdn-na.infragistics.com/igniteui/2019.1/latest/js/infragistics.core.js"></script>
+    <script src="http://cdn-na.infragistics.com/igniteui/2019.1/latest/js/infragistics.lob.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            
+        <link rel="stylesheet" type="text/css" href="styleSlider.css">
+
+<script src="Mich.js"></script>
+ <link href="http://cdn-na.infragistics.com/igniteui/2019.1/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet" />
+    <link href="http://cdn-na.infragistics.com/igniteui/2019.1/latest/css/structure/infragistics.css" rel="stylesheet" />
+
+    <script src="http://ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.8.3.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+
+    <!-- Ignite UI Required Combined JavaScript Files -->
+    <script src="http://cdn-na.infragistics.com/igniteui/2019.1/latest/js/infragistics.core.js"></script>
+    <script src="http://cdn-na.infragistics.com/igniteui/2019.1/latest/js/infragistics.lob.js"></script>
+
+   </head>
+   <body> <nav style="background-color: black;">
+    <div class="nav-wrapper" style="background-color: black;">
+      <ul>
+        <li> <div class="row searchFilter" >
+    <div class="input-field col s10" >
+          <input type="text" id="autocomplete-input" class="autocomplete"  placeholder="Enter Location">
+        </div>
+    </div></li>
+         <li><i class="material-icons">search</i></a></li>
+
+    <li>    <div id="checkboxSelectCombo"></div>
+</li>
+      </ul>
+    </div>
+  </nav>
+   <div class="content">
+       <div class="split a">
+           <!--Map-->
+      <div id="map"></div>
+        <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcggtxMfl244TjAb8oBbJn7H_a9GvHmxg&callback=initMap">
+        </script>
+
+       </div>
+       <div class="split b" id="descBox">
+           
+       </div>
+   </div>
+   <script src="https://unpkg.com/split.js/dist/split.min.js"></script>
+   <script>
+     Split(['.a', '.b'], {
+       gutterSize: 5,
+       sizes: [100,100],
+           direction: "vertical"
+     });
+   </script>
+   <script>
+
+        var colors = [
+            { Name: "Bathroom" },
+             { Name: "Female Hygiene Product" },
+{Name:"Baby Changing Seat"}
+
+           
+        ];
+
+        $(function () {
+
+            $("#singleSelectCombo").igCombo({
+                width: 300,
+                dataSource: colors,
+                textKey: "Name",
+                valueKey: "Name",
+                dropDownOnFocus: true,
+                dropDownOrientation: "bottom"
+            });
+
+            $("#multiSelectCombo").igCombo({
+                width: 300,
+                dataSource: colors,
+                textKey: "Name",
+                valueKey: "Name",
+                multiSelection: {
+                    enabled: true
+                },
+                dropDownOrientation: "bottom"
+            });
+
+            $("#checkboxSelectCombo").igCombo({
+                width: 300,
+                dataSource: colors,
+                textKey: "Name",
+                valueKey: "Name",
+                multiSelection: {
+                    enabled: true,
+                    showCheckboxes: true
+                },
+                dropDownOrientation: "bottom"
+            });
+
+        });
+
+    </script>
+   </body>
+</html>
