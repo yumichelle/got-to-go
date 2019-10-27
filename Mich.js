@@ -146,6 +146,44 @@ $(document).ready(function(){
     });
 
   });
+  var colors = [
+    { Name: "Bathroom" },
+     { Name: "Female Hygiene Product" },
+{Name:"Baby Changing Seat"}
+];
+$(function () {
+    $("#singleSelectCombo").igCombo({
+        width: 300,
+        dataSource: colors,
+        textKey: "Name",
+        valueKey: "Name",
+        dropDownOnFocus: true,
+        dropDownOrientation: "bottom"
+    });
+    $("#multiSelectCombo").igCombo({
+        width: 300,
+        dataSource: colors,
+        textKey: "Name",
+        valueKey: "Name",
+        multiSelection: {
+            enabled: true
+        },
+        dropDownOrientation: "bottom"
+    });
+    $("#checkboxSelectCombo").igCombo({
+        width: 300,
+        dataSource: colors,
+        textKey: "Name",
+        valueKey: "Name",
+        multiSelection: {
+            enabled: true,
+            showCheckboxes: true
+        },
+        dropDownOrientation: "bottom"
+    });
+});
+
+
 
 
 
